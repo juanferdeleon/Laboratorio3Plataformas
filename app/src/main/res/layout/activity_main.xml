@@ -6,14 +6,102 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
-
+    <ImageView
+            android:layout_width="358dp"
+            android:layout_height="128dp" app:srcCompat="@drawable/img2"
+            android:id="@+id/imageView"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/textView3"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="25dp"/>
     <TextView
+            android:text="Nombre"
+            android:layout_width="358dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/name"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="26dp"/>
+    <EditText android:layout_width="359dp" android:layout_height="17dp"
+              android:layout_marginTop="8dp"
+              app:layout_constraintTop_toBottomOf="@+id/name"
+              android:id="@+id/editText" app:layout_constraintStart_toStartOf="parent"
+              android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent"
+              android:layout_marginEnd="25dp"/>
+    <TextView
+            android:text=""
+            android:layout_width="359dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/userImput"
+            app:layout_constraintTop_toBottomOf="@+id/editText"
+            android:layout_marginTop="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="24dp"/>
+    <Button
+            android:text="Ingresar"
+            android:layout_width="359dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/setName" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/userImput"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="24dp"/>
+    <TextView
+            android:text="Guatemala, Guatemala"
+            android:layout_width="358dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="26dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="24dp"/>
+    <Button
+            android:text="Antigua Guatemala"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
+            android:id="@+id/button2"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="19dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+    />
+    <Button
+            android:text="Tikal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button3"
+            android:layout_marginStart="65dp" app:layout_constraintStart_toEndOf="@+id/button2"
+            app:layout_constraintEnd_toStartOf="@+id/button4" android:layout_marginEnd="66dp"
+            android:layout_marginBottom="19dp" app:layout_constraintBottom_toBottomOf="parent"/>
+    <Button
+            android:text="Atitlan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button4"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="19dp"/>
+    <ScrollView
+            android:layout_width="360dp"
+            android:layout_height="332dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" android:id="@+id/scrollView2" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/setName"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/button3">
+        <TextView
+                android:text="Guatemala, es el Corazón del Mundo Maya. Viva, mágica, mística y ancestral. Su historia se remonta a cuatro mil años, cuando emergió la civilización maya, cuyo legado perdura hoy en día con las tradiciones y cultura de su gente.
 
+\nGuatemala es un país de extraordinaria riqueza cultural y natural y con una ubicación geográfica privilegiada. Las distancias de lugar a lugar son cortas, lo que permite visitar varias regiones en un mismo viaje.
+
+\nEs un país único, de aventura, inolvidable, entre su pasado y presente, además de la diversidad de actividades que ofrece al visitante. Conocido como el país de la eterna primavera, goza de un clima agradable que permite visitarlo en cualquier época del año. Además, ofrece varias posibilidades de acceso desde cualquier parte del mundo, contando con dos aeropuertos internacionales: La Aurora, situado en la ciudad capital; y Mundo Maya, ubicado en el departamento de Petén.
+
+\nEl colorido de sus mercados de artesanías y de sus trajes regionales, la hospitalidad de su gente, la belleza de sus paisajes naturales que enmarcan volcanes, lagos, ríos y montañas, hacen que Guatemala quede grabada en el corazón de quienes la visitan. Su patrimonio natural, cultural e histórico puede descubrirse en cada rincón del país.
+
+\nGuatemala alberga la mayor cantidad de sitios arqueológicos de la cultura maya, rodeados de una impresionante flora y fauna, que los convierte en verdaderos pulmones de la humanidad. La magia y el misterio del Mundo Maya subsisten en ciudades milenarias como Tikal, Yaxhá, Aguateca, Mirador, Quiriguá y Q’uma’rkaj entre otras.
+
+\nAdemás, Guatemala ofrece ventajas en algunos segmentos específicos para los visitantes, como su ubicación estratégica, facilidades en sus terminales terrestres y marítimas, lo que la hacen un importante destino para los cruceros del Pacífico y el Atlántico. Sus recursos pesqueros en la Costa Pacífica le han dado reconocimiento como uno de los mejores lugares para la pesca del pez vela en el mundo. La variedad de más de 720 especies de aves, la convierte en un maravilloso e importante destino para observarlas. Así también, el país posee todas las características para propiciar actividades de negocios, además de ser un destino ideal para convenciones nacionales e internacionales.
+
+\nGuatemala con su riqueza y diversidad ofrece numerosas formas para gozar sus vacaciones o viajes de negocios, porque pueden encontrar en un solo lugar diferentes segmentos de turismo, en sus siete maravillosas regiones.\n"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/info"/>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>
