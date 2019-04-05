@@ -18,14 +18,14 @@
             android:text="Nombre"
             android:layout_width="358dp"
             android:layout_height="wrap_content"
-            android:id="@+id/name"
+            android:id="@+id/nameTxtView"
             android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/imageView" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="26dp"/>
-    <EditText android:layout_width="359dp" android:layout_height="17dp"
+    <EditText android:layout_width="359dp" android:layout_height="38dp"
               android:layout_marginTop="8dp"
-              app:layout_constraintTop_toBottomOf="@+id/name"
+              app:layout_constraintTop_toBottomOf="@+id/nameTxtView"
               android:id="@+id/editText" app:layout_constraintStart_toStartOf="parent"
               android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent"
               android:layout_marginEnd="25dp"/>
@@ -33,7 +33,7 @@
             android:text=""
             android:layout_width="359dp"
             android:layout_height="wrap_content"
-            android:id="@+id/userImput"
+            android:id="@+id/userInput"
             app:layout_constraintTop_toBottomOf="@+id/editText"
             android:layout_marginTop="8dp" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent"
@@ -43,7 +43,7 @@
             android:layout_width="359dp"
             android:layout_height="wrap_content"
             android:id="@+id/setName" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/userImput"
+            app:layout_constraintTop_toBottomOf="@+id/userInput"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="24dp"/>
     <TextView
@@ -61,9 +61,7 @@
             android:id="@+id/button2"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp"
-            android:layout_marginBottom="19dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-    />
+            app:layout_constraintTop_toBottomOf="@+id/scrollView2" android:layout_marginTop="8dp"/>
     <Button
             android:text="Tikal"
             android:layout_width="wrap_content"
@@ -71,22 +69,22 @@
             android:id="@+id/button3"
             android:layout_marginStart="65dp" app:layout_constraintStart_toEndOf="@+id/button2"
             app:layout_constraintEnd_toStartOf="@+id/button4" android:layout_marginEnd="66dp"
-            android:layout_marginBottom="19dp" app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintTop_toBottomOf="@+id/scrollView2" android:layout_marginTop="8dp"/>
     <Button
             android:text="Atitlan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button4"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="19dp"/>
+            app:layout_constraintTop_toBottomOf="@+id/scrollView2" android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"/>
     <ScrollView
             android:layout_width="360dp"
-            android:layout_height="332dp"
+            android:layout_height="142dp"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp" android:id="@+id/scrollView2" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="8dp"
             android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/setName"
-            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/button3">
+    >
         <TextView
                 android:text="Guatemala, es el Corazón del Mundo Maya. Viva, mágica, mística y ancestral. Su historia se remonta a cuatro mil años, cuando emergió la civilización maya, cuyo legado perdura hoy en día con las tradiciones y cultura de su gente.
 
