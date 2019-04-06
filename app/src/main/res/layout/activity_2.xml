@@ -17,9 +17,7 @@
                     tools:context=".Activity2">
 
                 <TextView
-                        android:background="#0036FF"
-                        android:textColor="#FFFFFF"
-                        android:gravity="center"
+                        style="@style/TitleStyle"
                         android:text="@{place.component1()}"
                         android:layout_width="380dp"
                         android:layout_height="43dp"
@@ -40,6 +38,7 @@
                         app:layout_constraintStart_toEndOf="@+id/phrase"
                         android:layout_marginStart="8dp" app:layout_constraintHorizontal_bias="1.0">
                     <TextView
+                            style="@style/TextStyle"
                             android:text="@{place.component3()}"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" android:id="@+id/description"/>
@@ -52,6 +51,7 @@
                           app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="32dp"
                 />
                 <TextView
+                        style="@style/SubtitleStyle"
                         android:text="Comentario"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -60,6 +60,7 @@
                         android:layout_marginStart="16dp"
                 />
                 <Button
+                        style="@style/ButtonStyle"
                         android:text="Comentario"
                         android:layout_width="380dp"
                         android:layout_height="52dp"
@@ -78,6 +79,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         android:layout_marginEnd="8dp" app:layout_constraintHorizontal_bias="0.066">
                     <TextView
+                            style="@style/SubtitleStyle"
                             android:text="@{place.component2()}"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
