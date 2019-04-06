@@ -1,92 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".MainActivity">
-    <ImageView
-            android:layout_width="358dp"
-            android:layout_height="128dp" app:srcCompat="@drawable/img2"
-            android:id="@+id/imageView"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/textView3"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="25dp"/>
-    <TextView
-            android:text="Nombre"
-            android:layout_width="358dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/nameTxtView"
-            android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="26dp"/>
-    <EditText android:layout_width="359dp" android:layout_height="38dp"
-              android:layout_marginTop="8dp"
-              app:layout_constraintTop_toBottomOf="@+id/nameTxtView"
-              android:id="@+id/editText" app:layout_constraintStart_toStartOf="parent"
-              android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent"
-              android:layout_marginEnd="25dp"/>
-    <TextView
-            android:text=""
-            android:layout_width="359dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/userInput"
-            app:layout_constraintTop_toBottomOf="@+id/editText"
-            android:layout_marginTop="8dp" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="24dp"/>
-    <Button
-            android:text="Ingresar"
-            android:layout_width="359dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/setName" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/userInput"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="24dp"/>
-    <TextView
-            android:text="Guatemala, Guatemala"
-            android:layout_width="358dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView3" app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="26dp" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="24dp"/>
-    <Button
-            android:text="Antigua Guatemala"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/button2"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/scrollView2" android:layout_marginTop="8dp"/>
-    <Button
-            android:text="Tikal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/button3"
-            android:layout_marginStart="65dp" app:layout_constraintStart_toEndOf="@+id/button2"
-            app:layout_constraintEnd_toStartOf="@+id/button4" android:layout_marginEnd="66dp"
-            app:layout_constraintTop_toBottomOf="@+id/scrollView2" android:layout_marginTop="8dp"/>
-    <Button
-            android:text="Atitlan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/button4"
-            app:layout_constraintTop_toBottomOf="@+id/scrollView2" android:layout_marginTop="8dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"/>
-    <ScrollView
-            android:layout_width="360dp"
-            android:layout_height="142dp"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" android:id="@+id/scrollView2" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp"
-            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/setName"
-    >
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="antiguaInfo" type="String"/>
+    </data>
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity">
+        <ImageView
+                android:layout_width="358dp"
+                android:layout_height="128dp" app:srcCompat="@drawable/img2"
+                android:id="@+id/imageView"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/textView3"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="25dp"/>
         <TextView
-                android:text="Guatemala, es el Corazón del Mundo Maya. Viva, mágica, mística y ancestral. Su historia se remonta a cuatro mil años, cuando emergió la civilización maya, cuyo legado perdura hoy en día con las tradiciones y cultura de su gente.
+                android:text="Nombre"
+                android:layout_width="358dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/nameTxtView"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="26dp"/>
+        <EditText android:layout_width="359dp" android:layout_height="38dp"
+                  android:layout_marginTop="8dp"
+                  app:layout_constraintTop_toBottomOf="@+id/nameTxtView"
+                  android:id="@+id/editText" app:layout_constraintStart_toStartOf="parent"
+                  android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent"
+                  android:layout_marginEnd="25dp"/>
+        <TextView
+                android:text=""
+                android:layout_width="359dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/userInput"
+                app:layout_constraintTop_toBottomOf="@+id/editText"
+                android:layout_marginTop="8dp" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="24dp"/>
+        <Button
+                android:text="Ingresar"
+                android:layout_width="359dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/setName" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/userInput"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="24dp"/>
+        <TextView
+                android:text="Guatemala, Guatemala"
+                android:layout_width="358dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView3" app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="26dp" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="24dp"/>
+        <Button
+                android:text="Antigua Guatemala"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/antiguaButton"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/scrollView2" android:layout_marginTop="8dp"/>
+        <Button
+                android:text="Tikal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button3"
+                android:layout_marginStart="65dp" app:layout_constraintStart_toEndOf="@+id/antiguaButton"
+                app:layout_constraintEnd_toStartOf="@+id/button4" android:layout_marginEnd="66dp"
+                app:layout_constraintTop_toBottomOf="@+id/scrollView2" android:layout_marginTop="8dp"/>
+        <Button
+                android:text="Atitlan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button4"
+                app:layout_constraintTop_toBottomOf="@+id/scrollView2" android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"/>
+        <ScrollView
+                android:layout_width="360dp"
+                android:layout_height="142dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp" android:id="@+id/scrollView2" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/setName"
+        >
+            <TextView
+                    android:text="Guatemala, es el Corazón del Mundo Maya. Viva, mágica, mística y ancestral. Su historia se remonta a cuatro mil años, cuando emergió la civilización maya, cuyo legado perdura hoy en día con las tradiciones y cultura de su gente.
 
 \nGuatemala es un país de extraordinaria riqueza cultural y natural y con una ubicación geográfica privilegiada. Las distancias de lugar a lugar son cortas, lo que permite visitar varias regiones en un mismo viaje.
 
@@ -99,7 +101,9 @@
 \nAdemás, Guatemala ofrece ventajas en algunos segmentos específicos para los visitantes, como su ubicación estratégica, facilidades en sus terminales terrestres y marítimas, lo que la hacen un importante destino para los cruceros del Pacífico y el Atlántico. Sus recursos pesqueros en la Costa Pacífica le han dado reconocimiento como uno de los mejores lugares para la pesca del pez vela en el mundo. La variedad de más de 720 especies de aves, la convierte en un maravilloso e importante destino para observarlas. Así también, el país posee todas las características para propiciar actividades de negocios, además de ser un destino ideal para convenciones nacionales e internacionales.
 
 \nGuatemala con su riqueza y diversidad ofrece numerosas formas para gozar sus vacaciones o viajes de negocios, porque pueden encontrar en un solo lugar diferentes segmentos de turismo, en sus siete maravillosas regiones.\n"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/info"/>
-    </ScrollView>
-</android.support.constraint.ConstraintLayout>
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/info"/>
+        </ScrollView>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>
