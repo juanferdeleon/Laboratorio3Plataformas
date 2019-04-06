@@ -7,7 +7,6 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
-import models.Place
 import models.Places
 
 /**
@@ -26,28 +25,30 @@ class MainActivity : AppCompatActivity() {
     private lateinit var atitlanButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //Array with places info
+        nameTxtView = findViewById(R.id.nameTxtView)
+        editTxt = findViewById(R.id.editText)
+        userInput = findViewById(R.id.userInput)
+
+        userInput.visibility = View.GONE
         val places = Places()
 
         //Set name button
         nameButton = findViewById(R.id.setName)
-        //
+
         nameButton.setOnClickListener {
 
-            if (!isNameShown){
-
-                nameTxtView = findViewById(R.id.nameTxtView)
-                editTxt = findViewById(R.id.editText)
-                userInput = findViewById(R.id.userInput)
+            if (!isNameShown) {
 
                 val input: String = editTxt.text.toString()
                 userInput.text = input
 
                 nameTxtView.visibility = View.GONE
                 editTxt.visibility = View.GONE
+                userInput.visibility = View.VISIBLE
 
                 isNameShown = true
 
@@ -60,18 +61,38 @@ class MainActivity : AppCompatActivity() {
                 isNameShown = false
 
             }
+        }
 
-            //Antigua Button
-            antiguaButton = findViewById(R.id.antiguaButton)
+        //Antigua Button
+        antiguaButton = findViewById(R.id.antiguaButton)
 
-            antiguaButton.setOnClickListener {
+        antiguaButton.setOnClickListener {
 
-                val intent = Intent(this, Activity2::class.java).putExtra("place", places.places[0])
-                startActivity(intent)
-
-            }
+            val intent = Intent(this, Activity2::class.java).putExtra("place", places.places[0])
+            startActivity(intent)
 
         }
+
+        //Tikal Button
+        tikalButton = findViewById(R.id.tikalButton)
+
+        tikalButton.setOnClickListener{
+
+            val intent = Intent(this, Activity2::class.java).putExtra("place", places.places[1])
+            startActivity(intent)
+
+        }
+
+        //Atitlan button
+        atitlanButton = findViewById(R.id.atitlanButton)
+
+        atitlanButton.setOnClickListener {
+
+            val intent = Intent(this, Activity2::class.java).putExtra("place", places.places[2])
+            startActivity(intent)
+
+        }
+
 
     }
 }
